@@ -4,11 +4,11 @@ from paramiko.ssh_exception import SSHException
 from netmiko.ssh_exception import AuthenticationException
 
 device1 = {
-'device_type': 'cisco_xr',
+'device_type': 'cisco_ios',
 'ip': 'ios-xe-mgmt-latest.cisco.com',
 'username': 'developer',
 'password': 'C1sco12345',
-'port': 8181
+'port': 22
 }
 
 devices = [device1]

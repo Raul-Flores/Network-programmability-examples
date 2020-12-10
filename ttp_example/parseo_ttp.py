@@ -10,18 +10,17 @@ device1 = {
 'port': 22
 }
 ttp_template  = """
-interface {{name}}
- description {{description}}
- ip address {{ip}} {{mask}}
+<group name="table_data"> 
+{{intf_name}}   {{ ip }}    YES NVRAM  {{ status_pyh}} {{status_layer2 | _line_}} {{ protocol }} 
+</group>
 """
-
 try:
     connection = ConnectHandler(**device1)
-    comando = connection.send_command('show run | sec interface')
+    comando = connection.send_command('show ip int brief')
+    print (comando)
 except Exception as unknown_error:
         print ('Error no identificado segun captura en el log es: \n ' + str(unknown_error))
 parseo = ttp(data=comando, template=ttp_template)
 parseo.parse()
 json_data = json.loads(parseo.result(format='json')[0])
-for x in range(0,7):
-    print  (json_data[0][x]['name'])
+pprint (json_data)
