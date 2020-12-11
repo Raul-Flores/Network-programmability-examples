@@ -1,2 +1,7 @@
 .venv
 ttp_example/.vscode/settings.json
+ttp_example/.vscode/sftp.json
+ttp_example/.vscode/settings.json
+ttp_example/ngrok-stable-linux-amd64.zip
+ttp_example/.vscode/settings.json
+ttp_example/nornir.log
