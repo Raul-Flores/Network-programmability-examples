@@ -1,0 +1,7 @@
+---
+sw:
+  password: 'admin'
+  platform: 'cisco'
+  data:
+     ntp_server: 3.3.3.3
+     snmp_community: cisco
